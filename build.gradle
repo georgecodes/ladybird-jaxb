@@ -1,0 +1,19 @@
+apply plugin: "java"
+apply plugin: "application"
+apply plugin: 'maven'
+
+group='com.elevenware'
+version='0.0.1-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+dependencies {
+    runtime "com.elevenware:ladybird:0.0.1-SNAPSHOT"
+    testCompile "junit:junit:4.11"
+}
