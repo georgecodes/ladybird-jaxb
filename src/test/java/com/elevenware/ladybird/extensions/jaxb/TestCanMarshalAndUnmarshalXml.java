@@ -19,8 +19,6 @@ public class TestCanMarshalAndUnmarshalXml extends AbstractHttpRecordingTestCase
     @Test
     public void xmlMarshalling() throws JAXBException, IOException {
 
-        JaxbContentHandler.register();
-
         Address address = new Address();
         LadybirdClient client = LadybirdClient.forLocalhost();
         client.sendXml().post("/xml", address);
