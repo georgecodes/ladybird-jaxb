@@ -13,7 +13,11 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
-    runtime "com.elevenware:ladybird:0.0.1-SNAPSHOT"
+    compile "com.elevenware:ladybird:0.0.1-SNAPSHOT"
     testCompile "junit:junit:4.11"
 }
