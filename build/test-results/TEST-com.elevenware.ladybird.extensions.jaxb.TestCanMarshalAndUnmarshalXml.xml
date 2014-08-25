@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.elevenware.ladybird.extensions.jaxb.TestCanMarshalAndUnmarshalXml" tests="2" skipped="0" failures="0" errors="0" timestamp="2014-08-25T12:21:14" hostname="george-mbp.local" time="0.373">
+  <properties/>
+  <testcase name="xmlUnmarshallingWithNoSchemaOrAnnotation" classname="com.elevenware.ladybird.extensions.jaxb.TestCanMarshalAndUnmarshalXml" time="0.358"/>
+  <testcase name="xmlMarshallingWithNoSchemaOrAnnotation" classname="com.elevenware.ladybird.extensions.jaxb.TestCanMarshalAndUnmarshalXml" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[2014-08-25 13:21:14.880:INFO:oejs.Server:jetty-8.1.15.v20140411
+2014-08-25 13:21:14.912:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:8080
+]]></system-err>
+</testsuite>
