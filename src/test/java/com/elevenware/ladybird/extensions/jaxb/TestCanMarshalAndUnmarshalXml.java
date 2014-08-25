@@ -17,11 +17,13 @@ import static org.junit.Assert.*;
 public class TestCanMarshalAndUnmarshalXml extends AbstractHttpRecordingTestCase {
 
     @Test
-    public void xmlMarshalling() throws JAXBException, IOException {
+    public void xmlMarshallingWithNoSchemaOrAnnotation() throws JAXBException, IOException, ClassNotFoundException {
 
-        JaxbContentHandler.register();
+        Class.forName(JaxbContentHandler.class.getCanonicalName());
 
         Address address = new Address();
+        address.setLineOne("123 Fake Street");
+
         LadybirdClient client = LadybirdClient.forLocalhost();
         client.sendXml().post("/xml", address);
 
@@ -29,6 +31,7 @@ public class TestCanMarshalAndUnmarshalXml extends AbstractHttpRecordingTestCase
 
         JAXBContext jaxb = JAXBContext.newInstance(Address.class);
         StreamSource xml = new StreamSource(request.getInputStream());
+
         JAXBElement<Address> jxe = jaxb.createUnmarshaller().unmarshal(xml, Address.class);
         Address other = jxe.getValue();
 
